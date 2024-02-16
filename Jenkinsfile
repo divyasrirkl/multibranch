@@ -3,7 +3,7 @@ pipeline
    agent any
    stages
    {
-      stage('ContDownload_Master')
+      stage('ContDownload_Loans')
       {
           steps
 	  {
@@ -12,16 +12,6 @@ pipeline
 	         cicd.newGit("maven")
              }
 	  }
-      }
-      stage('ContBuild_Master')
-      {
-         steps
-	 {
-	    script
-	    {
-	        cicd.newBuild()
-	    }
-	 }
       }
    }
 }
